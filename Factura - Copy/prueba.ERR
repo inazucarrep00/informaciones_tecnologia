@@ -1,0 +1,192 @@
+ADD OBJECT Grid1 AS Grid WITH  
+Error in line 196: Unrecognized command verb.
+ColumnCount = 2,  
+Error in line 198: Syntax error.
+Height = 200,  
+Error in line 200: Syntax error.
+Left = 24,  
+Error in line 202: Syntax error.
+RecordSource = "ardemo",  
+Error in line 204: Syntax error.
+Top = 24,  
+Error in line 206: Syntax error.
+Width = 320,  
+Error in line 208: Syntax error.
+Name = "Grid1",  
+Error in line 210: Syntax error.
+Column1.ControlSource = "ardemo.fruit",  
+Error in line 212: Syntax error.
+Column1.Width = 75,  
+Error in line 214: Syntax error.
+Column1.Name = "Column1",  
+Error in line 216: Syntax error.
+Column2.Bound = .F.,  
+Error in line 218: Syntax error.
+Column2.ControlSource = "This.ActiveRow",  
+Error in line 220: Syntax error.
+RETURN 
+Error in line 241: Statement is not in a procedure.
+SELECT IIF(ISNULL(MIN(order_number)),'',order_number) as order_number  FROM orders  WHERE TYPE(order_number)<>'U' AND !comanprocesada AND VAL(order_number)#0 GROUP BY order_number INTO CURSOR qMinOrden 
+Error in line 244: Statement is not in a procedure.
+SELECT MIN(order_number) as proxima FROM qMinOrden INTO CURSOR cOrderProxima
+Error in line 246: Statement is not in a procedure.
+RETURN 
+Error in line 252: Statement is not in a procedure.
+SELECT Orders.order_id, Orders.order_date, Orders.deliver_by, SUM(Orditems.unit_price*Orditems.quantity)-SUM(Orditems.unit_price*Orditems.quantity*.01*descto)+SUM(quantity * unit_price *.01*impto) AS ord_total FROM  tastrade!Orders  INNER JOIN tastrade!order_line_items Orditems  ON  Orders.order_id = Orditems.order_id WHERE  Orders.customer_id = '     3' GROUP BY Orders.order_id, Orders.order_date, Orders.deliver_by ORDER BY Orders.order_date DESC
+Error in line 261: Statement is not in a procedure.
+RETURN 
+Error in line 262: Statement is not in a procedure.
+SUM(Orditems.unit_price*Orditems.quantity)-Orders.discount*0.01*SUM(Orditems.unit_price*Orditems.quantity)+Orders.freight AS ord_total
+Error in line 263: Command contains unrecognized phrase/keyword.
+RETURN 
+Error in line 264: Statement is not in a procedure.
+SELECT * FROM permisos WHERE group_id = '     1' ORDER BY numero_menu, opmenu3 INTO CURSOR cRoles
+Error in line 265: Statement is not in a procedure.
+SELECT * FROM cRoles WHERE opmenu NOT IN (SELECT opmenu FROM permisos WHERE group_id = '     5')  INTO CURSOR cRolesUsuarios 
+Error in line 268: Statement is not in a procedure.
+quantity * MTON(unit_price) + (quantity * unit_price *.01*impto) -  (quantity * unit_price *.01*descto)
+Error in line 271: Unrecognized command verb.
+SUM(Orditems.unit_price*Orditems.quantity)-SUM(Orditems.unit_price*Orditems.quantity*.01*descto)+SUM(quantity * unit_price *.01*impto) AS ord_total
+Error in line 273: Command contains unrecognized phrase/keyword.
+RETURN
+Error in line 275: Statement is not in a procedure.
+SELECT MIN(order_number) as order_number  FROM orders  WHERE TYPE(order_number)<>'U' AND !comanprocesada AND VAL(order_number)#0 GROUP BY order_number INTO CURSOR qMinOrden
+Error in line 280: Statement is not in a procedure.
+RETURN
+Error in line 282: Statement is not in a procedure.
+oForm = Createobject('myForm')
+Error in line 284: Statement is not in a procedure.
+oForm.Show(1)
+Error in line 285: Statement is not in a procedure.
+RETURN 
+Error in line 461: Statement is not in a procedure.
+llswco = 0
+Error in line 462: Statement is not in a procedure.
+SELECT a.order_id, a.ship_to_name as company_name, a.order_number, a.order_date, a.pos_hora, a.cajero, a.mozo, a.swco_ord, b.product_id, b.name_product, b.quantity FROM  tastrade!tmpcomanda1 a  INNER JOIN tastrade!items_comanda1 b  ON  a.order_id = b.order_id WHERE  b.swco_ite = llswco ORDER BY a.order_number INTO CURSOR viewcocina
+Error in line 473: Statement is not in a procedure.
+RETURN
+Error in line 475: Statement is not in a procedure.
+CLOSE ALL  
+Error in line 477: Statement is not in a procedure.
+OPEN DATABASE (HOME(2) + 'Data\testdata')
+Error in line 478: Statement is not in a procedure.
+USE customer  IN 0  
+Error in line 480: Statement is not in a procedure.
+frmMyForm = CREATEOBJECT('Form')  
+Error in line 482: Statement is not in a procedure.
+frmMyForm.Closable = .f.  
+Error in line 483: Statement is not in a procedure.
+frmMyForm.AddObject('cmdCommand1','cmdMyCmdBtn')  
+Error in line 485: Statement is not in a procedure.
+frmMyForm.AddObject('grdGrid1','Grid')  
+Error in line 486: Statement is not in a procedure.
+frmMyForm.grdGrid1.Left = 25  
+Error in line 488: Statement is not in a procedure.
+frmMyForm.grdGrid1.SetAll("DynamicBackColor", "IIF(MOD(RECNO( ), 2)=0, RGB(255,255,255), RGB(0,255,0))", "Column")  
+Error in line 490: Statement is not in a procedure.
+frmMyForm.grdGrid1.Visible = .T.  
+Error in line 492: Statement is not in a procedure.
+frmMyForm.cmdCommand1.Visible =.T.  
+Error in line 493: Statement is not in a procedure.
+frmMyForm.grdGrid1.Column1.Header1.Caption = 'Customer ID'
+Error in line 494: Statement is not in a procedure.
+frmMyForm.SHOW  
+Error in line 496: Statement is not in a procedure.
+READ EVENTS  
+Error in line 497: Statement is not in a procedure.
+RETURN 
+Error in line 514: Statement is not in a procedure.
+CLOSE DATABASES
+Error in line 515: Statement is not in a procedure.
+OPEN DATABASE (HOME(2) + 'data\testdata')
+Error in line 516: Statement is not in a procedure.
+USE customer ORDER company  
+Error in line 517: Statement is not in a procedure.
+CLEAR
+Error in line 518: Statement is not in a procedure.
+@ 2,2 SAY LOOKUP(contact, 'Ernst Handel', company, 'company')
+Error in line 519: Statement is not in a procedure.
+RETURN 
+Error in line 521: Statement is not in a procedure.
+CLOSE DATABASES
+Error in line 522: Statement is not in a procedure.
+OPEN DATABASE c:\sistemas\factura\data\tastrade EXCLUSIVE 
+Error in line 523: Statement is not in a procedure.
+VALIDATE DATABASE RECOVER 
+Error in line 525: Statement is not in a procedure.
+RETURN 
+Error in line 527: Statement is not in a procedure.
+i=4
+Error in line 528: Statement is not in a procedure.
+cad = SPACE(4)
+Error in line 529: Statement is not in a procedure.
+DO WHILE i>0
+Error in line 530: Statement is not in a procedure.
+nInsert = 1 + 100 * RAND()
+Error in line 531: Statement is not in a procedure.
+IF BETWEEN(nInsert,65,90) OR BETWEEN(nInsert,48,57)
+Error in line 532: Statement is not in a procedure.
+Cad = Cad + CHR(nInsert)
+Error in line 533: Statement is not in a procedure.
+i=i-1
+Error in line 534: Statement is not in a procedure.
+ENDIF 
+Error in line 535: Statement is not in a procedure.
+ENDDO 
+Error in line 536: Statement is not in a procedure.
+WAIT WINDOW "Caja "+ALLTRIM(cad)
+Error in line 537: Statement is not in a procedure.
+return
+Error in line 538: Statement is not in a procedure.
+FOR nItem = 1 TO 4  
+Error in line 540: Statement is not in a procedure.
+APPEND BLANK
+Error in line 541: Statement is not in a procedure.
+nInsert = 1 + 100 * RAND()
+Error in line 542: Statement is not in a procedure.
+IF BETWEEN(nInsert,65,90) OR BETWEEN(nInsert,48,57)
+Error in line 543: Statement is not in a procedure.
+REPLACE cValue WITH nInsert  
+Error in line 544: Statement is not in a procedure.
+ELSE 
+Error in line 545: Statement is not in a procedure.
+ENDIF 
+Error in line 547: Statement is not in a procedure.
+ENDFOR
+Error in line 548: Statement is not in a procedure.
+return
+Error in line 549: Statement is not in a procedure.
+CLEAR
+Error in line 550: Statement is not in a procedure.
+LIST  
+Error in line 551: Statement is not in a procedure.
+gnMaximum = 1  
+Error in line 552: Statement is not in a procedure.
+gnMinimum = 100  
+Error in line 553: Statement is not in a procedure.
+SCAN 
+Error in line 554: Statement is not in a procedure.
+gnMinimum = MIN(gnMinimum, cValue)
+Error in line 555: Statement is not in a procedure.
+gnMaximum = MAX(gnMaximum, cValue)
+Error in line 556: Statement is not in a procedure.
+ENDSCAN
+Error in line 557: Statement is not in a procedure.
+? 'The minimum value is: ', gnMinimum  
+Error in line 558: Statement is not in a procedure.
+? 'The maximum value is: ', gnMaximum  
+Error in line 559: Statement is not in a procedure.
+CLEAR
+Error in line 561: Statement is not in a procedure.
+gnLower = 1
+Error in line 562: Statement is not in a procedure.
+gnUpper = 10
+Error in line 563: Statement is not in a procedure.
+? INT((gnUpper - gnLower + 1) * RAND( ) + gnLower)
+Error in line 565: Statement is not in a procedure.
+65-90 A-Z
+Error in line 566: Syntax error.
+48-57 0-9
+Error in line 567: Syntax error.
+06:04:35 PM
+Error in line 568: Syntax error.

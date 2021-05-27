@@ -1,0 +1,4 @@
+CASE BETWEEN(nKeyCode, 32, 126)	
+Error en la línea 215: Falta una palabra clave en la estructura de comandos FOR...ENDFOR o DO CASE...ENDCASE.
+AT(" ",cstring,1)+1
+Error en la línea 236: Error de sintaxis.

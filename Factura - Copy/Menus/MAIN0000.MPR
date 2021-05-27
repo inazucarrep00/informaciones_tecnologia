@@ -1,0 +1,510 @@
+*       *********************************************************
+*       *                                                         
+*       * 08/06/13            MAIN0000.MPR              19:46:22  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Nombre del autor                                        
+*       *                                                         
+*       * Copyright (C) 2013 Nombre de la organización            
+*       * Dirección                                               
+*       * Ciudad,     Código pos                                  
+*       * País                                              
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                     Establecer código                   
+*       *                                                         
+*       *********************************************************
+*
+
+#INCLUDE "INCLUDE\TASTRADE.H"
+
+  IF !USED("Employee")
+      USE tastrade!Employee IN 0
+  ENDIF
+  =SEEK(DefaultEmployee(),"Employee","Employee_i")
+  cGroup = Employee.group_id
+
+  IF !USED("PERMISOS")
+      USE tastrade!permisos IN 0
+  ENDIF
+SELECT PERMISOS
+SET FILTER TO group_id = cGroup
+
+SCAN
+*    IF opmenu = "030200"
+      veremos = permisos.acceso
+*    ENDIF
+*    BROWSE normal
+ENDSCAN
+*=SEEK(cMenu,"permisos","opmenu")
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+SET SYSMENU TO
+SET SYSMENU AUTOMATIC
+
+DEFINE PAD Pad OF _MSYSMENU PROMPT "\<Archivo" COLOR SCHEME 3 ;
+	KEY ALT+A, "ALT+A" ;
+	MESSAGE "Crear, guardar, eliminar y restaurar registros, cerrar formularios, imprimir informes o salir de Tastrade"
+DEFINE PAD Edit OF _MSYSMENU PROMPT "\<Edición" COLOR SCHEME 3 ;
+	KEY ALT+E, "ALT+E" ;
+	MESSAGE "Modifica texto o la selección actual"
+DEFINE PAD _3ul16doqm OF _MSYSMENU PROMPT "\<Parametros" COLOR SCHEME 3 ;
+	KEY ALT+P, ""
+DEFINE PAD Orders OF _MSYSMENU PROMPT "\<Facturas" COLOR SCHEME 3 ;
+	KEY ALT+P, "ALT+P" ;
+	MESSAGE "Accede a los formularios Entrada de pedidos e Historial de pedidos"
+DEFINE PAD _msm_file OF _MSYSMENU PROMPT "Ad\<ministración" COLOR SCHEME 3 ;
+	KEY ALT+C, "ALT+C" ;
+	MESSAGE "Registrarse, cambiar la contraseña y tener acceso a todos los formularios de mantenimiento"
+DEFINE PAD Utilities OF _MSYSMENU PROMPT "U\<tilidades" COLOR SCHEME 3 ;
+	KEY ALT+T, "ALT+T" ;
+	MESSAGE "Ventanas Seguimiento, Depuración y Vista, suspender, reanudar y cancelar programas"
+DEFINE PAD _msm_systm OF _MSYSMENU PROMPT "Ay\<uda" COLOR SCHEME 3 ;
+	KEY ALT+U, "ALT+U" ;
+	MESSAGE "Muestra la Ayuda de Tastrade"
+ON PAD Pad OF _MSYSMENU ACTIVATE POPUP archivo
+ON PAD Edit OF _MSYSMENU ACTIVATE POPUP edición
+ON PAD _3ul16doqm OF _MSYSMENU ACTIVATE POPUP parametros
+ON PAD Orders OF _MSYSMENU ACTIVATE POPUP facturas
+ON PAD _msm_file OF _MSYSMENU ACTIVATE POPUP _qx713dsus
+ON PAD Utilities OF _MSYSMENU ACTIVATE POPUP utilidades
+ON PAD _msm_systm OF _MSYSMENU ACTIVATE POPUP help
+
+DEFINE POPUP archivo MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF archivo PROMPT "\<Nuevo" ;
+	KEY CTRL+N, "Ctrl+N" ;
+	SKIP FOR !FormIsObject() OR !ToolBarEnabled("cmdNew") ;
+	MESSAGE "Crea un nuevo registro en el formulario activo"
+DEFINE BAR 2 OF archivo PROMPT "\<Cerrar" ;
+	SKIP FOR !FormIsObject() OR !ToolBarEnabled("cmdClose") ;
+	MESSAGE "Cierra el formulario activo."
+DEFINE BAR 3 OF archivo PROMPT "\-"
+DEFINE BAR 4 OF archivo PROMPT "\<Guardar" ;
+	KEY CTRL+S, "Ctrl+S" ;
+	SKIP FOR !FormIsObject()  OR !ToolBarEnabled("cmdSave") ;
+	MESSAGE "Guarda el registro actual en el formulario activo."
+DEFINE BAR 5 OF archivo PROMPT "\<Restaurar" ;
+	KEY CTRL+E, "Ctrl+E" ;
+	SKIP FOR !FormIsObject()  OR !ToolBarEnabled("cmdRestore") ;
+	MESSAGE "Restaura los valores originales del registro actual en el formulario activo."
+DEFINE BAR 6 OF archivo PROMPT "\<Eliminar" ;
+	SKIP FOR !FormIsObject()  OR TYPE("oApp.oToolBar") # "O" OR !_screen.activeform.lAllowDelete ;
+	MESSAGE "Elimina el registro actual del formulario activo."
+DEFINE BAR 7 OF archivo PROMPT "\-"
+DEFINE BAR 8 OF archivo PROMPT "\<Imprimir informes ..." ;
+	KEY CTRL+P, "Ctrl+P" ;
+	MESSAGE "Ejecuta el informe y el formulario de selección."
+DEFINE BAR 9 OF archivo PROMPT "C\<onfigurar impresión" ;
+	MESSAGE "Cambia la distribución de página y la configuración de impresora"
+DEFINE BAR 10 OF archivo PROMPT "\-"
+DEFINE BAR 11 OF archivo PROMPT "\<Salir" ;
+	SKIP FOR !EMPTY(WONTOP())
+ON SELECTION BAR 1 OF archivo oApp.oToolbar.cmdNew.Click()
+ON SELECTION BAR 2 OF archivo oApp.oToolbar.cmdClose.Click()
+ON SELECTION BAR 4 OF archivo oApp.oToolbar.cmdSave.Click()
+ON SELECTION BAR 5 OF archivo oApp.oToolbar.cmdRestore.Click()
+ON SELECTION BAR 6 OF archivo _screen.activeform.delete()
+ON SELECTION BAR 8 OF archivo DO FORM Reports
+ON SELECTION BAR 9 OF archivo ;
+	DO _3ul16doqn ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+ON SELECTION BAR 11 OF archivo ;
+	DO _3ul16doqo ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+
+DEFINE POPUP edición MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _med_undo OF edición PROMPT "\<Deshacer" ;
+	KEY CTRL+Z, "Ctrl+Z" ;
+	MESSAGE "Deshace el último cambio realizado al control actual del formulario activo"
+DEFINE BAR _med_redo OF edición PROMPT "\<Rehacer" ;
+	KEY CTRL+R, "Ctrl+R" ;
+	MESSAGE "Repite el último cambio realizado al control actual del formulario activo"
+DEFINE BAR 3 OF edición PROMPT "\-"
+DEFINE BAR _med_cut OF edición PROMPT "Cor\<tar" ;
+	KEY CTRL+X, "Ctrl+X" ;
+	MESSAGE "Quita la selección y la coloca en el Portapapeles"
+DEFINE BAR _med_copy OF edición PROMPT "\<Copiar" ;
+	KEY CTRL+C, "Ctrl+C" ;
+	MESSAGE "Copia la selección en el Portapapeles"
+DEFINE BAR _med_paste OF edición PROMPT "\<Pegar" ;
+	KEY CTRL+V, "Ctrl+V" ;
+	MESSAGE "Pega el contenido del Portapapeles"
+DEFINE BAR 7 OF edición PROMPT "\-"
+DEFINE BAR _med_slcta OF edición PROMPT "Se\<leccionar todo" ;
+	KEY CTRL+A, "Ctrl+A" ;
+	MESSAGE "Selecciona todo el texto del control actual del formulario activo"
+
+DEFINE POPUP parametros MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF parametros PROMPT "\<G e n e r a l e s"
+ON BAR 1 OF parametros ACTIVATE POPUP generales
+
+DEFINE POPUP generales MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF generales PROMPT "\<B a s i c o s" ;
+	SKIP FOR veremos
+DEFINE BAR 2 OF generales PROMPT "\<A c c e s o r i o s" ;
+	SKIP FOR veremos
+ON SELECTION BAR 1 OF generales oApp.DoForm("Parambas")
+ON SELECTION BAR 2 OF generales oApp.DoForm("ParamAcce")
+
+DEFINE POPUP facturas MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF facturas PROMPT "\<F a c t u r a s" ;
+	SKIP FOR !EMPTY(WONTOP())
+DEFINE BAR 2 OF facturas PROMPT "\<C o t i z a c i o n e s" ;
+	SKIP FOR !EMPTY(WONTOP())
+DEFINE BAR 3 OF facturas PROMPT "\<H i s t o r i a l" ;
+	SKIP FOR !EMPTY(WONTOP()) ;
+	MESSAGE "Ejecuta el formulario Historial de pedidos"
+ON BAR 1 OF facturas ACTIVATE POPUP _3sw1a6enl
+ON BAR 2 OF facturas ACTIVATE POPUP creacotiza
+ON BAR 3 OF facturas ACTIVATE POPUP historial
+
+DEFINE POPUP _3sw1a6enl MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF _3sw1a6enl PROMPT "\<C r e a c i o n"
+DEFINE BAR 2 OF _3sw1a6enl PROMPT "\<M o d i f i c a c i o n"
+ON SELECTION BAR 1 OF _3sw1a6enl ;
+	DO _3ul16doqp ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+ON SELECTION BAR 2 OF _3sw1a6enl ;
+	DO _3ul16doqq ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+
+DEFINE POPUP creacotiza MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF creacotiza PROMPT "\<C r e a c i o n"
+DEFINE BAR 2 OF creacotiza PROMPT "\<M o d i f i  c a c i o n"
+ON SELECTION BAR 1 OF creacotiza ;
+	DO _3ul16doqr ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+ON SELECTION BAR 2 OF creacotiza ;
+	DO _3ul16doqs ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+
+DEFINE POPUP historial MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF historial PROMPT "\<F a c t u r a s"
+DEFINE BAR 2 OF historial PROMPT "\<C o t i z a c i o n e s"
+ON SELECTION BAR 1 OF historial ;
+	DO _3ul16doqt ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+ON SELECTION BAR 2 OF historial ;
+	DO _3ul16doqu ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+
+DEFINE POPUP _qx713dsus MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF _qx713dsus PROMPT "Ca\<mbiar de usuario" ;
+	SKIP FOR !EMPTY(WONTOP()) ;
+	MESSAGE "Registrarse como otro usuario."
+DEFINE BAR 2 OF _qx713dsus PROMPT "C\<ambiar contraseña" ;
+	SKIP FOR !EMPTY(WONTOP()) ;
+	MESSAGE "Cambia la contraseña para el usuario actual"
+DEFINE BAR 3 OF _qx713dsus PROMPT "\-"
+DEFINE BAR 4 OF _qx713dsus PROMPT "\<Clientes" ;
+	SKIP FOR WEXIST("frmCustomers") ;
+	MESSAGE "Agrega, modifica o elimina clientes"
+DEFINE BAR 5 OF _qx713dsus PROMPT "Ca\<tegorías" ;
+	SKIP FOR WEXIST("frmCategory") ;
+	MESSAGE "Agrega, modifica o elimina categorías"
+DEFINE BAR 6 OF _qx713dsus PROMPT "\<Usuarios" ;
+	SKIP FOR WEXIST("frmEmployee") ;
+	MESSAGE "Agrega, modifica o elimina empleados"
+DEFINE BAR 7 OF _qx713dsus PROMPT "Co\<mpañías de envío" ;
+	SKIP FOR WEXIST("frmShippers") ;
+	MESSAGE "Agrega, modifica o elimina compañías de envío"
+DEFINE BAR 8 OF _qx713dsus PROMPT "Pro\<veedores" ;
+	SKIP FOR WEXIST("frmSuppliers") ;
+	MESSAGE "Agrega, modifica o elimina proveedores"
+DEFINE BAR 9 OF _qx713dsus PROMPT "\<Productos" ;
+	SKIP FOR WEXIST("frmProducts") ;
+	MESSAGE "Agrega, modifica o elimina productos"
+DEFINE BAR 10 OF _qx713dsus PROMPT "\-"
+DEFINE BAR 11 OF _qx713dsus PROMPT "\<Información técnica" ;
+	SKIP FOR VAL(DefaultEmployee())#19 ;
+	MESSAGE "Averiguar cómo se creó esta aplicación"
+ON SELECTION BAR 1 OF _qx713dsus ;
+	DO _3ul16doqv ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+ON SELECTION BAR 2 OF _qx713dsus DO FORM chngpswd
+ON SELECTION BAR 4 OF _qx713dsus oApp.DoForm("customer")
+ON SELECTION BAR 5 OF _qx713dsus oApp.DoForm("category")
+ON SELECTION BAR 6 OF _qx713dsus oApp.DoForm("employee")
+ON SELECTION BAR 7 OF _qx713dsus oApp.DoForm("shipper")
+ON SELECTION BAR 8 OF _qx713dsus oApp.DoForm("supplier")
+ON SELECTION BAR 9 OF _qx713dsus oApp.DoForm("product")
+ON SELECTION BAR 11 OF _qx713dsus oApp.DoForm("behindsc")
+
+DEFINE POPUP utilidades MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _MWI_TRACE OF utilidades PROMPT "\<Seguimiento" ;
+	MESSAGE "Muestra la ventana Seguimiento"
+DEFINE BAR _MWI_DEBUG OF utilidades PROMPT "D\<epuración" ;
+	MESSAGE "Muestra la ventana Depuración."
+DEFINE BAR _MWI_VIEW OF utilidades PROMPT "\<Vista" ;
+	MESSAGE "Muestra la ventana Vista."
+DEFINE BAR _MWI_CMD OF utilidades PROMPT "\<Comandos" ;
+	KEY CTRL+F2, "Ctrl+F2" ;
+	MESSAGE "Muestra la ventana Comandos."
+DEFINE BAR 5 OF utilidades PROMPT "\-"
+DEFINE BAR 6 OF utilidades PROMPT "S\<uspender" ;
+	MESSAGE "Suspende el programa que hay actualmente en ejecución"
+DEFINE BAR _MPR_RESUM OF utilidades PROMPT "\<Reanudar" ;
+	MESSAGE "Reanuda la ejecución del programa suspendido actualmente"
+DEFINE BAR _MPR_CANCL OF utilidades PROMPT "C\<ancelar" ;
+	MESSAGE "Detiene la ejecución del programa actual"
+DEFINE BAR 9 OF utilidades PROMPT "\-"
+DEFINE BAR 10 OF utilidades PROMPT "Regenerar \<DBC/Reindizar" ;
+	SKIP FOR !EMPTY(WONTOP()) ;
+	MESSAGE "Vuelve a generar la base de datos e indiza de nuevo todas las tablas"
+DEFINE BAR 11 OF utilidades PROMPT "Res\<paldo" ;
+	SKIP FOR !EMPTY(WONTOP())
+ON SELECTION BAR 6 OF utilidades suspend
+ON SELECTION BAR 10 OF utilidades DO FORM rebuild
+ON SELECTION BAR 11 OF utilidades DO FORM respaldo
+
+DEFINE POPUP help MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _mst_help OF help PROMPT "\<Contenido" ;
+	MESSAGE "Muestra el índice de la Ayuda."
+DEFINE BAR _mst_hpsch OF help PROMPT "\<Buscar Ayuda sobre..." ;
+	MESSAGE "Busca temas de Ayuda por palabra clave."
+DEFINE BAR 3 OF help PROMPT "\-"
+DEFINE BAR 4 OF help PROMPT "\<Acerca de Mofac..." ;
+	MESSAGE "Muestra información sobre esta aplicación y la configuración del sistema."
+ON SELECTION BAR 4 OF help ;
+	DO _3ul16dor2 ;
+	IN LOCFILE("FACTURA\MENUS\MAIN0000" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MAIN0000?")
+
+ON SELECTION MENU _MSYSMENU *-- (c) Microsoft Corporation 1995
+ON SELECTION POPUP archivo 
+
+*       *********************************************************
+*       *                                                         
+*       *              Limpiar código y procedimientos            
+*       *                                                         
+*       *********************************************************
+*
+
+*-RELEASE BAR 1 OF Window
+
+IF UPPER(oApp.GetUserLevel()) <> USER_APPDEV_LOC
+  RELEASE PAD Utilities OF _MSYSMENU
+ENDIF
+
+IF !INLIST(UPPER(oApp.GetUserLevel()) , USER_APPDEV_LOC, USER_OPSMGR_LOC)
+  RELEASE BAR 1 OF ADMINBAR_LOC  && Login
+  RELEASE BAR 2 OF ADMINBAR_LOC  && Change Password
+  RELEASE BAR 3 OF ADMINBAR_LOC  && Separator
+ENDIF
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQN  ON SELECTION BAR 9 OF POPUP archivo         
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   15       
+*       * Called By:  ON SELECTION BAR 9 OF POPUP archivo         
+*       * Prompt:     Configurar impresión                        
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqn
+LOCAL lcOldError
+lcOldError = ON('ERROR')
+ON ERROR *
+=SYS(1037)
+ON ERROR &lcOldError
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQO  ON SELECTION BAR 11 OF POPUP archivo        
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   18       
+*       * Called By:  ON SELECTION BAR 11 OF POPUP archivo        
+*       * Prompt:     Salir                                       
+*       * Snippet:    2                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqo
+*- cleanup will be done in the oApp object's Do method
+DO respaldo.prg
+CLEAR EVENTS
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQP  ON SELECTION BAR 1 OF POPUP _3sw1a6enl      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   39       
+*       * Called By:  ON SELECTION BAR 1 OF POPUP _3sw1a6enl      
+*       * Prompt:     C r e a c i o n                             
+*       * Snippet:    3                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqp
+tipodoc = 'F'
+Do Form ordentry with 'F',.T.
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQQ  ON SELECTION BAR 2 OF POPUP _3sw1a6enl      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   40       
+*       * Called By:  ON SELECTION BAR 2 OF POPUP _3sw1a6enl      
+*       * Prompt:     M o d i f i c a c i o n                     
+*       * Snippet:    4                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqq
+tipodoc = 'F'
+Do Form ordentry2 with 'F',.T.
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQR  ON SELECTION BAR 1 OF POPUP creacotiza      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   43       
+*       * Called By:  ON SELECTION BAR 1 OF POPUP creacotiza      
+*       * Prompt:     C r e a c i o n                             
+*       * Snippet:    5                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqr
+tipodoc = 'C'
+Do Form ordentry with 'C',.F.
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQS  ON SELECTION BAR 2 OF POPUP creacotiza      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   44       
+*       * Called By:  ON SELECTION BAR 2 OF POPUP creacotiza      
+*       * Prompt:     M o d i f i  c a c i o n                    
+*       * Snippet:    6                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqs
+tipodoc = 'C'
+Do Form ordentry2 with 'C',.F.
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQT  ON SELECTION BAR 1 OF POPUP historial       
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   47       
+*       * Called By:  ON SELECTION BAR 1 OF POPUP historial       
+*       * Prompt:     F a c t u r a s                             
+*       * Snippet:    7                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqt
+tipodoc = 'F'
+oApp.DoForm("ordhist")
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQU  ON SELECTION BAR 2 OF POPUP historial       
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   48       
+*       * Called By:  ON SELECTION BAR 2 OF POPUP historial       
+*       * Prompt:     C o t i z a c i o n e s                     
+*       * Snippet:    8                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqu
+tipodoc = 'C'
+oApp.DoForm("ordhist2")
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOQV  ON SELECTION BAR 1 OF POPUP _qx713dsus      
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   51       
+*       * Called By:  ON SELECTION BAR 1 OF POPUP _qx713dsus      
+*       * Prompt:     Cambiar de usuario                          
+*       * Snippet:    9                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16doqv
+LOCAL lcUserLevel
+
+lcUserLevel = oApp.GetUserLevel()
+=oApp.Login()
+
+IF oApp.GetUserLevel() <> lcUserLevel
+  oApp.DoMenu()
+ENDIF
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _3UL16DOR2  ON SELECTION BAR 4 OF POPUP help            
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAIN0000.MPR,            Record:   82       
+*       * Called By:  ON SELECTION BAR 4 OF POPUP help            
+*       * Prompt:     Acerca de Mofac...                          
+*       * Snippet:    10                                          
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _3ul16dor2
+LOCAL loAboutBox
+
+
+SET CLASSLIB TO about ADDITIVE
+loAboutBox = CREATEOBJECT("AboutBox", ;
+              TASTRADE_LOC, ;
+              VERSION_LOC, ;
+              COPYRIGHT_LOC, ;
+              RIGHTSRSRVD_LOC, ;
+              "BITMAPS\cartridge06.BMP")
+
+loAboutBox.Show()
+RELEASE CLASSLIB about.vcx

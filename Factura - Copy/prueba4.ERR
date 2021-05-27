@@ -1,0 +1,208 @@
+Utilice el método AddObject para agregar objetos a un contenedor después de crear el objeto contenedor. Por ejemplo, las líneas de código siguientes crean un objeto Form y le agregan dos botones de comando:
+Error in line 5: Unrecognized command verb.
+frmMessage = CREATEOBJECT("FORM")
+Error in line 7: Statement is not in a procedure.
+frmMessage.AddObject("txt1", "TEXTBOX")
+Error in line 8: Statement is not in a procedure.
+frmMessage.AddObject("txt2", "TEXTBOX")
+Error in line 9: Statement is not in a procedure.
+También puede utilizar el método AddObject en el código de método de una clase. Por ejemplo, la definición de clase siguiente utiliza AddObject en el código asociado al evento Init para agregar un control a una columna de cuadrícula.
+Error in line 10: Unrecognized command verb.
+RETURN
+Error in line 21: Statement is not in a procedure.
+PUBLIC oform1
+Error in line 25: Statement is not in a procedure.
+oform1 = NEWOBJECT("form1")
+Error in line 26: Statement is not in a procedure.
+oform1.SHOW
+Error in line 27: Statement is not in a procedure.
+RETURN
+Error in line 28: Statement is not in a procedure.
+RETURN 
+Error in line 196: Statement is not in a procedure.
+oForm = CREATEOBJECT('myForm')
+Error in line 203: Statement is not in a procedure.
+WITH oForm
+Error in line 204: Statement is not in a procedure.
+.ADDOBJECT('Tree','myTreeView')
+Error in line 205: Statement is not in a procedure.
+.ADDOBJECT('Lister','Lister')
+Error in line 206: Statement is not in a procedure.
+WITH .Tree
+Error in line 207: Statement is not in a procedure.
+.Nodes.ADD(,0,"root1",'Main node 2')
+Error in line 208: Statement is not in a procedure.
+.Nodes.ADD(,0,"root2",'Main node 3')
+Error in line 209: Statement is not in a procedure.
+.Nodes.ADD('root1',4,"child11",'Child11')
+Error in line 210: Statement is not in a procedure.
+.Nodes.ADD('root1',4,"child12",'Child12')
+Error in line 211: Statement is not in a procedure.
+.Nodes.ADD('root2',4,"child21",'Child22')
+Error in line 212: Statement is not in a procedure.
+.Nodes.ADD('child21',3,"child20",'Child21')
+Error in line 213: Statement is not in a procedure.
+.Nodes.ADD('child11',4,"child111",'child113')
+Error in line 214: Statement is not in a procedure.
+.Nodes.ADD('child111',3,"child112",'child112')
+Error in line 215: Statement is not in a procedure.
+.Nodes.ADD('child112',3,"child113",'child111')
+Error in line 216: Statement is not in a procedure.
+.Nodes.ADD('root1',3,"root0",'Main node 1')
+Error in line 217: Statement is not in a procedure.
+.VISIBLE = .T.
+Error in line 218: Statement is not in a procedure.
+ENDWITH
+Error in line 219: Statement is not in a procedure.
+.Lister.LEFT = .WIDTH - .Lister.WIDTH
+Error in line 220: Statement is not in a procedure.
+.Lister.VISIBLE = .T.
+Error in line 221: Statement is not in a procedure.
+.SHOW()
+Error in line 222: Statement is not in a procedure.
+ENDWITH
+Error in line 223: Statement is not in a procedure.
+READ EVENTS
+Error in line 224: Statement is not in a procedure.
+RETURN 
+Error in line 297: Statement is not in a procedure.
+Publi ymaster As Form , yslave As Form
+Error in line 303: Statement is not in a procedure.
+ymaster=Newobject("ymast")
+Error in line 304: Statement is not in a procedure.
+ymaster.Show
+Error in line 305: Statement is not in a procedure.
+Read Events
+Error in line 306: Statement is not in a procedure.
+Retu
+Error in line 307: Statement is not in a procedure.
+RETURN 
+Error in line 977: Statement is not in a procedure.
+RELEASE goForm
+Error in line 982: Statement is not in a procedure.
+PUBLIC goForm as mytreeform OF ddtree2.prg
+Error in line 983: Statement is not in a procedure.
+goForm = CREATEOBJECT( "myTreeForm" )
+Error in line 985: Statement is not in a procedure.
+goForm.show
+Error in line 986: Statement is not in a procedure.
+RETURN
+Error in line 988: Statement is not in a procedure.
+Parameters xtop,xleft,xwidth,xheight
+Error in line 1086: Statement is not in a procedure.
+If Pcount()<>4
+Error in line 1087: Statement is not in a procedure.
+Return .F.
+Error in line 1088: Statement is not in a procedure.
+Endif
+Error in line 1089: Statement is not in a procedure.
+yslave=Newobject("yslave_")
+Error in line 1091: Statement is not in a procedure.
+yslave.Show(1)
+Error in line 1092: Statement is not in a procedure.
+Retu
+Error in line 1093: Statement is not in a procedure.
+RETURN 
+Error in line 1137: Statement is not in a procedure.
+RELEASE goOtForm
+Error in line 1142: Statement is not in a procedure.
+PUBLIC goOtForm
+Error in line 1143: Statement is not in a procedure.
+goOtForm = CREATEOBJECT( "cForm" )
+Error in line 1146: Statement is not in a procedure.
+goOtForm.tree1.Nodes.Add( , , "A1", "Hello" )
+Error in line 1150: Statement is not in a procedure.
+loNode = goOtForm.tree1.Nodes.item["A1"]
+Error in line 1153: Statement is not in a procedure.
+goOtForm.tree1.Nodes.Add( loNode, 4, "A2", "World" )
+Error in line 1154: Statement is not in a procedure.
+goOtForm.tree1.Nodes.item["A2"].EnsureVisible()
+Error in line 1157: Statement is not in a procedure.
+loNode = goOtForm.tree1.Nodes.item["A2"]
+Error in line 1160: Statement is not in a procedure.
+For lnI = 1 to 20
+Error in line 1161: Statement is not in a procedure.
+lcKey = "B" + Transform(lnI)
+Error in line 1162: Statement is not in a procedure.
+goOtForm.tree1.Nodes.Add( loNode, 4, lcKey, "Moon " + Transform(lnI) )
+Error in line 1163: Statement is not in a procedure.
+endfor
+Error in line 1164: Statement is not in a procedure.
+goOtForm.tree1.Nodes.item["A2"].Expanded = .t.
+Error in line 1167: Statement is not in a procedure.
+loNode = goOtForm.tree1.Nodes.item["A1"].EnsureVisible()
+Error in line 1170: Statement is not in a procedure.
+Return
+Error in line 1172: Statement is not in a procedure.
+OleTree.ImageList = OleImagesList.Object
+Error in line 1215: Statement is not in a procedure.
+strImgKey = "MyImageCaption" 
+Error in line 1218: Statement is not in a procedure.
+objImage = OleImagesList.ListImages.Add(, , LoadPicture(strPath)) 
+Error in line 1219: Statement is not in a procedure.
+objImage.Key = strImgKey
+Error in line 1220: Statement is not in a procedure.
+ImageListIndex = OleImagesList.ListImages(strImgKey).index
+Error in line 1221: Statement is not in a procedure.
+strNodeIndex = "_1"
+Error in line 1224: Statement is not in a procedure.
+strText = "Parent"
+Error in line 1225: Statement is not in a procedure.
+oleTree.Nodes.add(,,strNodeIndex,strText, ImageListIndex) 
+Error in line 1226: Statement is not in a procedure.
+Level Node
+Error in line 1227: Unrecognized command verb.
+strParentNodeIndex = "_1"
+Error in line 1228: Statement is not in a procedure.
+strNodeIndex = "_2"
+Error in line 1229: Statement is not in a procedure.
+strText = "Child"
+Error in line 1230: Statement is not in a procedure.
+oleTree.Nodes.add(strParentNodeIndex, 4, strNodeIndex, strText,
+Error in line 1231: Missing operand.
+ImageListIndex) 
+Error in line 1232: Unrecognized command verb.
+Textbox.OLEDragMode = 1 
+Error in line 1235: Statement is not in a procedure.
+this.Nodes.Add( .null., 0, "A1", "Drop text here" )
+Error in line 1238: Statement is not in a procedure.
+LPARAMETERS oData, effect, button, shift, x, y, state
+Error in line 1242: Statement is not in a procedure.
+LOCAL loNode
+Error in line 1243: Statement is not in a procedure.
+IF oData.GetFormat(1) 
+Error in line 1244: Statement is not in a procedure.
+loNode = THIS.HitTest( x*15, y*15 )
+Error in line 1245: Statement is not in a procedure.
+THIS.DropHighlight = loNode
+Error in line 1246: Statement is not in a procedure.
+ENDIF
+Error in line 1247: Statement is not in a procedure.
+LPARAMETERS oData, effect, button, shift, x, y
+Error in line 1251: Statement is not in a procedure.
+LOCAL lcData, loNode
+Error in line 1252: Statement is not in a procedure.
+IF oData.GetFormat(1) 
+Error in line 1253: Statement is not in a procedure.
+THIS.DropHighlight = .NULL.
+Error in line 1255: Statement is not in a procedure.
+lcData = oData.GetData(1) 
+Error in line 1256: Statement is not in a procedure.
+loNode = THIS.HitTest( x*15,y*15 )
+Error in line 1257: Statement is not in a procedure.
+MessageBox( 'Node at ('+TRANSFORM(x)+','+transform(y)+') Got data: ' + lcData )
+Error in line 1258: Statement is not in a procedure.
+if VarType(loNode)='O'
+Error in line 1259: Statement is not in a procedure.
+this.nodes.Add( loNode, 4, "A" + SYS(3), lcData )
+Error in line 1260: Statement is not in a procedure.
+loNode.expanded = .t.
+Error in line 1261: Statement is not in a procedure.
+else
+Error in line 1262: Statement is not in a procedure.
+this.nodes.Add( .null., 0, "A" + SYS(3), lcData )
+Error in line 1263: Statement is not in a procedure.
+endif
+Error in line 1264: Statement is not in a procedure.
+ENDIF
+Error in line 1266: Statement is not in a procedure.

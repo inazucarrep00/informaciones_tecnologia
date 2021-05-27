@@ -1,0 +1,14 @@
+LPARAMETER nDia
+LOCAL aDias(7)
+aDias=""
+DIMENSION aDias[7]
+aDias(1) = "Lunes"
+aDias(2) = "Martes"
+aDias(3) = "Miercoles"
+aDias(4) = "Jueves"
+aDias(5) = "Viernes"
+aDias(6) = "Sabado"
+aDias(7) = "Domingo"
+
+RETURN (aDias(nDia)) 
+

@@ -1,0 +1,4 @@
+LPARAMETER nMes
+
+RETURN ( DAY(CTOD("01/"+TRANS(nMes+1,"@L 99")+"/"+TRANS(YEAR(DATE()),"9999"))-1) )
+

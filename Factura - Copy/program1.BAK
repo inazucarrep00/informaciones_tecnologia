@@ -1,0 +1,21 @@
+SET DATE DMY 
+SET CENTURY ON 
+grpturno=2
+txtFechaDia=CTOD("25/06/2014")
+
+SELECT Maqpto.descri_cpu, Maqpto.name_abre, Maqpto.clave_oper,;
+  tmpcierre.nro_cierre, tmpcierre.monto_ini, tmpcierre.cash,;
+  tmpcierre.cheques, tmpcierre.monto_repo, tmpcierre.tot_al_cie,;
+  tmpcierre.resultado, Docs.descri_doc, Docs.monto, Docs.sw_cash,;
+  tmpcierre.apertura, tmpcierre.hora_abre, tmpcierre.cierre,;
+  tmpcierre.hora_cie, Docs.fecha_e, Docs.nro_fact, 2 AS grupo;
+ FROM  tastrade!maqpto INNER JOIN tmpcierre;
+    INNER JOIN tastrade!docs ;
+   ON  tmpcierre.cierre = Docs.fecha_e ;
+   ON  Maqpto.descri_cpu = tmpcierre.descri_cpu;
+ WHERE tmpcierre.descri_cpu = Docs.maq_pto AND Docs.turno=grpturno;
+   AND docs.turno = Maqpto.turno;
+   AND (Docs.tipo_doc = "P" ;
+   AND BETWEEN(txtFechaDia,tmpcierre.Apertura,tmpcierre.Cierre));
+ ORDER BY Docs.sw_cash, Docs.nro_fact;
+ INTO CURSOR reportecaja

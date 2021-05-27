@@ -1,0 +1,41 @@
+LOCAL laTables[1], ;
+      i,;
+      lSafety,;
+      Foldersres,;
+      RespaldoxDia,;
+      NuevoFolders
+      
+*  lSafety = SET("SAFETY")     
+*  SET SAFETY OFF
+  OPEN DATABASE SYS(2003)+"\DATA\tastrade"
+*  VALIDATE DATABASE RECOVER NOCONSOLE 
+
+ * IF !USED("cod_seq")
+ *     USE tastrade!cod_seq IN 0
+ * ENDIF
+ * SELECT cod_seq
+ * Foldersres = ALLT(SYS(5)+Cod_seq.Respaldo)
+ * RespaldoxDia = ALLT(Foldersres) + ALLT(UPPER(NombreDia(DOW(DATE())))) + "\" 
+
+CLOSE TABLES
+FOR i = 1 to ADBOBJECTS(laTables, "Table")
+  IF !EMPTY(laTables[i]) 
+     IF !USED(laTables[i])
+         USE (laTables[i]) IN 0 EXCL
+         SELECT (laTables[i])
+*         COPY TO ALLT(RespaldoxDia) + UPPER(ALLTRIM(laTables[i])) + ".DBF"
+*         WAIT WINDOW NOWAIT "Realizando copia de respaldo de sus datos en el folder " + RespaldoxDia + CHR(13) +;
+*                            "Esto puede tardar varios minutos" + CHR(13) + CHR(13)+;
+*                            "Copiando ... " + UPPER(ALLTRIM(laTables[i])) + ".DBF"
+         WAIT WINDOW "folders " + UPPER(ALLTRIM(laTables[i])) + ".DBF"
+ 
+     ENDIF
+  ENDIF 
+ENDFOR
+
+CLOSE TABLES
+CLOSE DATABASES
+*SET SAFETY &lSafety
+
+RETURN .T.
+

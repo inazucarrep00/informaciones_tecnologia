@@ -1,0 +1,686 @@
+Database = ..\data\tastrade.dbc
+Error en la línea 12: Error de sintaxis.
+Database = ..\data\tastrade.dbc
+Error en la línea 20: Error de sintaxis.
+Database = ..\data\tastrade.dbc
+Error en la línea 28: Error de sintaxis.
+tsbaseform
+Error en la línea 32: No se reconoce el verbo de comando.
+ýþ
+Error en la línea 127: No se reconoce el verbo de comando.
++
+Error en la línea 130: No se reconoce el verbo de comando.
+Arial, 1, 8, 5, 14, 11, 29, 3, 0
+Error en la línea 131: No se reconoce el verbo de comando.
+DO FORM behindsc WITH .T.
+Error en la línea 135: La instrucción no está en un procedimiento.
+SELECT customer
+Error en la línea 136: La instrucción no está en un procedimiento.
+this.Enabled = .F.
+Error en la línea 137: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 139: Error de anidamiento.
+Left = 411
+Error en la línea 141: La instrucción no está en un procedimiento.
+Height = 26
+Error en la línea 142: La instrucción no está en un procedimiento.
+Width = 118
+Error en la línea 143: La instrucción no está en un procedimiento.
+Caption = "\<Información técnica"
+Error en la línea 144: La instrucción no está en un procedimiento.
+TabIndex = 18
+Error en la línea 145: La instrucción no está en un procedimiento.
+Name = "cmdBehindSC"
+Error en la línea 146: La instrucción no está en un procedimiento.
+commandbutton
+Error en la línea 148: No se reconoce el verbo de comando.
+thisform.lRetVal = .F.
+Error en la línea 149: La instrucción no está en un procedimiento.
+=TABLEREVERT()
+Error en la línea 150: La instrucción no está en un procedimiento.
+RELEASE thisform
+Error en la línea 151: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 153: Error de anidamiento.
+Left = 246
+Error en la línea 155: La instrucción no está en un procedimiento.
+Height = 26
+Error en la línea 156: La instrucción no está en un procedimiento.
+Width = 107
+Error en la línea 157: La instrucción no está en un procedimiento.
+Cancel = .T.
+Error en la línea 158: La instrucción no está en un procedimiento.
+Caption = "\<Cancelar"
+Error en la línea 159: La instrucción no está en un procedimiento.
+TabIndex = 17
+Error en la línea 160: La instrucción no está en un procedimiento.
+Name = "cmdCancel"
+Error en la línea 161: La instrucción no está en un procedimiento.
+lallowprint
+Error en la línea 163: No se reconoce el verbo de comando.
+Left = 5
+Error en la línea 165: La instrucción no está en un procedimiento.
+Width = 599
+Error en la línea 166: La instrucción no está en un procedimiento.
+Height = 321
+Error en la línea 167: La instrucción no está en un procedimiento.
+TabIndex = 2
+Error en la línea 168: La instrucción no está en un procedimiento.
+Name = "cntCustomerInfo"
+Error en la línea 169: La instrucción no está en un procedimiento.
+txtCompany_Name.Left = 51
+Error en la línea 170: La instrucción no está en un procedimiento.
+txtCompany_Name.TabIndex = 2
+Error en la línea 171: La instrucción no está en un procedimiento.
+txtCompany_Name.Top = 69
+Error en la línea 172: La instrucción no está en un procedimiento.
+txtCompany_Name.Name = "txtCompany_Name"
+Error en la línea 173: La instrucción no está en un procedimiento.
+txtContact_Name.Height = 24
+Error en la línea 174: La instrucción no está en un procedimiento.
+txtContact_Name.Left = 51
+Error en la línea 175: La instrucción no está en un procedimiento.
+txtContact_Name.TabIndex = 4
+Error en la línea 176: La instrucción no está en un procedimiento.
+txtContact_Name.Top = 108
+Error en la línea 177: La instrucción no está en un procedimiento.
+txtContact_Name.Width = 294
+Error en la línea 178: La instrucción no está en un procedimiento.
+txtContact_Name.Name = "txtContact_Name"
+Error en la línea 179: La instrucción no está en un procedimiento.
+txtContact_Tel.Format = ""
+Error en la línea 180: La instrucción no está en un procedimiento.
+txtContact_Tel.Height = 24
+Error en la línea 181: La instrucción no está en un procedimiento.
+txtContact_Tel.InputMask = "(999) 999-9999"
+Error en la línea 182: La instrucción no está en un procedimiento.
+txtContact_Tel.Left = 349
+Error en la línea 183: La instrucción no está en un procedimiento.
+txtContact_Tel.TabIndex = 5
+Error en la línea 184: La instrucción no está en un procedimiento.
+txtContact_Tel.Top = 108
+Error en la línea 185: La instrucción no está en un procedimiento.
+txtContact_Tel.Width = 176
+Error en la línea 186: La instrucción no está en un procedimiento.
+txtContact_Tel.Name = "txtContact_Tel"
+Error en la línea 187: La instrucción no está en un procedimiento.
+txtAddress.Height = 24
+Error en la línea 188: La instrucción no está en un procedimiento.
+txtAddress.Left = 51
+Error en la línea 189: La instrucción no está en un procedimiento.
+txtAddress.TabIndex = 6
+Error en la línea 190: La instrucción no está en un procedimiento.
+txtAddress.Top = 147
+Error en la línea 191: La instrucción no está en un procedimiento.
+txtAddress.Width = 474
+Error en la línea 192: La instrucción no está en un procedimiento.
+txtAddress.Name = "txtAddress"
+Error en la línea 193: La instrucción no está en un procedimiento.
+txtCity.Height = 24
+Error en la línea 194: La instrucción no está en un procedimiento.
+txtCity.Left = 51
+Error en la línea 195: La instrucción no está en un procedimiento.
+txtCity.TabIndex = 7
+Error en la línea 196: La instrucción no está en un procedimiento.
+txtCity.Top = 186
+Error en la línea 197: La instrucción no está en un procedimiento.
+txtCity.Width = 199
+Error en la línea 198: La instrucción no está en un procedimiento.
+txtCity.Name = "txtCity"
+Error en la línea 199: La instrucción no está en un procedimiento.
+txtPostal_Code.Height = 24
+Error en la línea 200: La instrucción no está en un procedimiento.
+txtPostal_Code.Left = 416
+Error en la línea 201: La instrucción no está en un procedimiento.
+txtPostal_Code.TabIndex = 9
+Error en la línea 202: La instrucción no está en un procedimiento.
+txtPostal_Code.Top = 185
+Error en la línea 203: La instrucción no está en un procedimiento.
+txtPostal_Code.Width = 110
+Error en la línea 204: La instrucción no está en un procedimiento.
+txtPostal_Code.Name = "txtPostal_Code"
+Error en la línea 205: La instrucción no está en un procedimiento.
+txtCountry.Height = 24
+Error en la línea 206: La instrucción no está en un procedimiento.
+txtCountry.Left = 255
+Error en la línea 207: La instrucción no está en un procedimiento.
+txtCountry.TabIndex = 8
+Error en la línea 208: La instrucción no está en un procedimiento.
+txtCountry.Top = 186
+Error en la línea 209: La instrucción no está en un procedimiento.
+txtCountry.Width = 157
+Error en la línea 210: La instrucción no está en un procedimiento.
+txtCountry.Name = "txtCountry"
+Error en la línea 211: La instrucción no está en un procedimiento.
+txtPhone.Format = ""
+Error en la línea 212: La instrucción no está en un procedimiento.
+txtPhone.Height = 24
+Error en la línea 213: La instrucción no está en un procedimiento.
+txtPhone.InputMask = "(999) 999-9999"
+Error en la línea 214: La instrucción no está en un procedimiento.
+txtPhone.Left = 51
+Error en la línea 215: La instrucción no está en un procedimiento.
+txtPhone.TabIndex = 10
+Error en la línea 216: La instrucción no está en un procedimiento.
+txtPhone.Top = 225
+Error en la línea 217: La instrucción no está en un procedimiento.
+txtPhone.Width = 121
+Error en la línea 218: La instrucción no está en un procedimiento.
+txtPhone.Name = "txtPhone"
+Error en la línea 219: La instrucción no está en un procedimiento.
+Tslabel12.FontSize = 9
+Error en la línea 220: La instrucción no está en un procedimiento.
+Tslabel12.Alignment = 0
+Error en la línea 221: La instrucción no está en un procedimiento.
+Tslabel12.Caption = "Compañia"
+Error en la línea 222: La instrucción no está en un procedimiento.
+Tslabel12.Left = 57
+Error en la línea 223: La instrucción no está en un procedimiento.
+Tslabel12.Top = 56
+Error en la línea 224: La instrucción no está en un procedimiento.
+Tslabel12.TabIndex = 4
+Error en la línea 225: La instrucción no está en un procedimiento.
+Tslabel12.Name = "Tslabel12"
+Error en la línea 226: La instrucción no está en un procedimiento.
+Tslabel13.FontSize = 9
+Error en la línea 227: La instrucción no está en un procedimiento.
+Tslabel13.Alignment = 0
+Error en la línea 228: La instrucción no está en un procedimiento.
+Tslabel13.Left = 57
+Error en la línea 229: La instrucción no está en un procedimiento.
+Tslabel13.Top = 94
+Error en la línea 230: La instrucción no está en un procedimiento.
+Tslabel13.TabIndex = 17
+Error en la línea 231: La instrucción no está en un procedimiento.
+Tslabel13.Name = "Tslabel13"
+Error en la línea 232: La instrucción no está en un procedimiento.
+Tslabel14.FontSize = 9
+Error en la línea 233: La instrucción no está en un procedimiento.
+Tslabel14.Alignment = 0
+Error en la línea 234: La instrucción no está en un procedimiento.
+Tslabel14.Caption = "Contacto tel"
+Error en la línea 235: La instrucción no está en un procedimiento.
+Tslabel14.Left = 355
+Error en la línea 236: La instrucción no está en un procedimiento.
+Tslabel14.Top = 94
+Error en la línea 237: La instrucción no está en un procedimiento.
+Tslabel14.TabIndex = 18
+Error en la línea 238: La instrucción no está en un procedimiento.
+Tslabel14.Name = "Tslabel14"
+Error en la línea 239: La instrucción no está en un procedimiento.
+Tslabel15.FontSize = 9
+Error en la línea 240: La instrucción no está en un procedimiento.
+Tslabel15.Alignment = 0
+Error en la línea 241: La instrucción no está en un procedimiento.
+Tslabel15.Height = 17
+Error en la línea 242: La instrucción no está en un procedimiento.
+Tslabel15.Left = 57
+Error en la línea 243: La instrucción no está en un procedimiento.
+Tslabel15.Top = 133
+Error en la línea 244: La instrucción no está en un procedimiento.
+Tslabel15.Width = 121
+Error en la línea 245: La instrucción no está en un procedimiento.
+Tslabel15.TabIndex = 20
+Error en la línea 246: La instrucción no está en un procedimiento.
+Tslabel15.Name = "Tslabel15"
+Error en la línea 247: La instrucción no está en un procedimiento.
+Tslabel16.FontSize = 9
+Error en la línea 248: La instrucción no está en un procedimiento.
+Tslabel16.Alignment = 0
+Error en la línea 249: La instrucción no está en un procedimiento.
+Tslabel16.Left = 57
+Error en la línea 250: La instrucción no está en un procedimiento.
+Tslabel16.Top = 172
+Error en la línea 251: La instrucción no está en un procedimiento.
+Tslabel16.TabIndex = 23
+Error en la línea 252: La instrucción no está en un procedimiento.
+Tslabel16.Name = "Tslabel16"
+Error en la línea 253: La instrucción no está en un procedimiento.
+Tslabel18.FontSize = 9
+Error en la línea 254: La instrucción no está en un procedimiento.
+Tslabel18.Alignment = 0
+Error en la línea 255: La instrucción no está en un procedimiento.
+Tslabel18.Height = 17
+Error en la línea 256: La instrucción no está en un procedimiento.
+Tslabel18.Left = 420
+Error en la línea 257: La instrucción no está en un procedimiento.
+Tslabel18.Top = 172
+Error en la línea 258: La instrucción no está en un procedimiento.
+Tslabel18.Width = 102
+Error en la línea 259: La instrucción no está en un procedimiento.
+Tslabel18.TabIndex = 25
+Error en la línea 260: La instrucción no está en un procedimiento.
+Tslabel18.Name = "Tslabel18"
+Error en la línea 261: La instrucción no está en un procedimiento.
+Tslabel19.FontSize = 9
+Error en la línea 262: La instrucción no está en un procedimiento.
+Tslabel19.Height = 17
+Error en la línea 263: La instrucción no está en un procedimiento.
+Tslabel19.Left = 259
+Error en la línea 264: La instrucción no está en un procedimiento.
+Tslabel19.Top = 172
+Error en la línea 265: La instrucción no está en un procedimiento.
+Tslabel19.Width = 25
+Error en la línea 266: La instrucción no está en un procedimiento.
+Tslabel19.TabIndex = 26
+Error en la línea 267: La instrucción no está en un procedimiento.
+Tslabel19.Name = "Tslabel19"
+Error en la línea 268: La instrucción no está en un procedimiento.
+Tslabel20.FontSize = 9
+Error en la línea 269: La instrucción no está en un procedimiento.
+Tslabel20.Alignment = 0
+Error en la línea 270: La instrucción no está en un procedimiento.
+Tslabel20.Height = 17
+Error en la línea 271: La instrucción no está en un procedimiento.
+Tslabel20.Left = 57
+Error en la línea 272: La instrucción no está en un procedimiento.
+Tslabel20.Top = 211
+Error en la línea 273: La instrucción no está en un procedimiento.
+Tslabel20.Width = 69
+Error en la línea 274: La instrucción no está en un procedimiento.
+Tslabel20.TabIndex = 27
+Error en la línea 275: La instrucción no está en un procedimiento.
+Tslabel20.Name = "Tslabel20"
+Error en la línea 276: La instrucción no está en un procedimiento.
+Tslabel21.FontSize = 9
+Error en la línea 277: La instrucción no está en un procedimiento.
+Tslabel21.Height = 17
+Error en la línea 278: La instrucción no está en un procedimiento.
+Tslabel21.Left = 162
+Error en la línea 279: La instrucción no está en un procedimiento.
+Tslabel21.Top = 210
+Error en la línea 280: La instrucción no está en un procedimiento.
+Tslabel21.Width = 44
+Error en la línea 281: La instrucción no está en un procedimiento.
+Tslabel21.TabIndex = 28
+Error en la línea 282: La instrucción no está en un procedimiento.
+Tslabel21.Name = "Tslabel21"
+Error en la línea 283: La instrucción no está en un procedimiento.
+Tslabel1.FontSize = 9
+Error en la línea 284: La instrucción no está en un procedimiento.
+Tslabel1.Alignment = 0
+Error en la línea 285: La instrucción no está en un procedimiento.
+Tslabel1.Caption = "Codigo"
+Error en la línea 286: La instrucción no está en un procedimiento.
+Tslabel1.Left = 57
+Error en la línea 287: La instrucción no está en un procedimiento.
+Tslabel1.Top = 17
+Error en la línea 288: La instrucción no está en un procedimiento.
+Tslabel1.TabIndex = 29
+Error en la línea 289: La instrucción no está en un procedimiento.
+Tslabel1.Name = "Tslabel1"
+Error en la línea 290: La instrucción no está en un procedimiento.
+txtCustomer_ID.Height = 24
+Error en la línea 291: La instrucción no está en un procedimiento.
+txtCustomer_ID.Left = 51
+Error en la línea 292: La instrucción no está en un procedimiento.
+txtCustomer_ID.TabIndex = 1
+Error en la línea 293: La instrucción no está en un procedimiento.
+txtCustomer_ID.Top = 32
+Error en la línea 294: La instrucción no está en un procedimiento.
+txtCustomer_ID.Width = 232
+Error en la línea 295: La instrucción no está en un procedimiento.
+txtCustomer_ID.Name = "txtCustomer_ID"
+Error en la línea 296: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.Format = ""
+Error en la línea 297: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.Height = 22
+Error en la línea 298: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.InputMask = "999,999,999.99"
+Error en la línea 299: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.Left = 321
+Error en la línea 300: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.TabIndex = 12
+Error en la línea 301: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.Top = 226
+Error en la línea 302: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.Width = 138
+Error en la línea 303: La instrucción no está en un procedimiento.
+txtMax_Ord_Amt.Name = "txtMax_Ord_Amt"
+Error en la línea 304: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.Alignment = 3
+Error en la línea 305: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.Value = 1
+Error en la línea 306: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.Format = ""
+Error en la línea 307: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.InputMask = "999,999,999.99 Pts"
+Error en la línea 308: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.Left = 547
+Error en la línea 309: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.ReadOnly = .T.
+Error en la línea 310: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.TabIndex = 16
+Error en la línea 311: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.Top = 293
+Error en la línea 312: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.Visible = .F.
+Error en la línea 313: La instrucción no está en un procedimiento.
+txtMin_Ord_Amt.Name = "txtMin_Ord_Amt"
+Error en la línea 314: La instrucción no está en un procedimiento.
+txtDiscount.Height = 22
+Error en la línea 315: La instrucción no está en un procedimiento.
+txtDiscount.Left = 466
+Error en la línea 316: La instrucción no está en un procedimiento.
+txtDiscount.TabIndex = 13
+Error en la línea 317: La instrucción no está en un procedimiento.
+txtDiscount.Top = 225
+Error en la línea 318: La instrucción no está en un procedimiento.
+txtDiscount.Width = 47
+Error en la línea 319: La instrucción no está en un procedimiento.
+txtDiscount.Name = "txtDiscount"
+Error en la línea 320: La instrucción no está en un procedimiento.
+lblMaximum.FontSize = 9
+Error en la línea 321: La instrucción no está en un procedimiento.
+lblMaximum.Alignment = 0
+Error en la línea 322: La instrucción no está en un procedimiento.
+lblMaximum.Caption = "Máximo Credito"
+Error en la línea 323: La instrucción no está en un procedimiento.
+lblMaximum.Height = 22
+Error en la línea 324: La instrucción no está en un procedimiento.
+lblMaximum.Left = 325
+Error en la línea 325: La instrucción no está en un procedimiento.
+lblMaximum.Top = 211
+Error en la línea 326: La instrucción no está en un procedimiento.
+lblMaximum.Width = 103
+Error en la línea 327: La instrucción no está en un procedimiento.
+lblMaximum.TabIndex = 21
+Error en la línea 328: La instrucción no está en un procedimiento.
+lblMaximum.Name = "lblMaximum"
+Error en la línea 329: La instrucción no está en un procedimiento.
+Tslabel3.FontSize = 9
+Error en la línea 330: La instrucción no está en un procedimiento.
+Tslabel3.Alignment = 0
+Error en la línea 331: La instrucción no está en un procedimiento.
+Tslabel3.Caption = "Descto"
+Error en la línea 332: La instrucción no está en un procedimiento.
+Tslabel3.Left = 469
+Error en la línea 333: La instrucción no está en un procedimiento.
+Tslabel3.Top = 211
+Error en la línea 334: La instrucción no está en un procedimiento.
+Tslabel3.TabIndex = 24
+Error en la línea 335: La instrucción no está en un procedimiento.
+Tslabel3.Name = "Tslabel3"
+Error en la línea 336: La instrucción no está en un procedimiento.
+txtFax.Format = ""
+Error en la línea 337: La instrucción no está en un procedimiento.
+txtFax.Height = 24
+Error en la línea 338: La instrucción no está en un procedimiento.
+txtFax.InputMask = "(999) 999-9999"
+Error en la línea 339: La instrucción no está en un procedimiento.
+txtFax.Left = 179
+Error en la línea 340: La instrucción no está en un procedimiento.
+txtFax.TabIndex = 11
+Error en la línea 341: La instrucción no está en un procedimiento.
+txtFax.Top = 224
+Error en la línea 342: La instrucción no está en un procedimiento.
+txtFax.Width = 119
+Error en la línea 343: La instrucción no está en un procedimiento.
+txtFax.Name = "txtFax"
+Error en la línea 344: La instrucción no está en un procedimiento.
+txtRnc.Format = ""
+Error en la línea 345: La instrucción no está en un procedimiento.
+txtRnc.Height = 24
+Error en la línea 346: La instrucción no está en un procedimiento.
+txtRnc.InputMask = "9-9999999-9"
+Error en la línea 347: La instrucción no está en un procedimiento.
+txtRnc.Left = 399
+Error en la línea 348: La instrucción no está en un procedimiento.
+txtRnc.TabIndex = 3
+Error en la línea 349: La instrucción no está en un procedimiento.
+txtRnc.Top = 69
+Error en la línea 350: La instrucción no está en un procedimiento.
+txtRnc.Width = 125
+Error en la línea 351: La instrucción no está en un procedimiento.
+txtRnc.Name = "txtRnc"
+Error en la línea 352: La instrucción no está en un procedimiento.
+Tslabel2.FontSize = 9
+Error en la línea 353: La instrucción no está en un procedimiento.
+Tslabel2.Alignment = 0
+Error en la línea 354: La instrucción no está en un procedimiento.
+Tslabel2.Caption = "Reg. tributario"
+Error en la línea 355: La instrucción no está en un procedimiento.
+Tslabel2.Left = 408
+Error en la línea 356: La instrucción no está en un procedimiento.
+Tslabel2.Top = 55
+Error en la línea 357: La instrucción no está en un procedimiento.
+Tslabel2.TabIndex = 22
+Error en la línea 358: La instrucción no está en un procedimiento.
+Tslabel2.Name = "Tslabel2"
+Error en la línea 359: La instrucción no está en un procedimiento.
+Tslabel4.FontSize = 9
+Error en la línea 360: La instrucción no está en un procedimiento.
+Tslabel4.Alignment = 0
+Error en la línea 361: La instrucción no está en un procedimiento.
+Tslabel4.Left = 56
+Error en la línea 362: La instrucción no está en un procedimiento.
+Tslabel4.Top = 249
+Error en la línea 363: La instrucción no está en un procedimiento.
+Tslabel4.TabIndex = 19
+Error en la línea 364: La instrucción no está en un procedimiento.
+Tslabel4.Name = "Tslabel4"
+Error en la línea 365: La instrucción no está en un procedimiento.
+txtimail.Height = 24
+Error en la línea 366: La instrucción no está en un procedimiento.
+txtimail.Left = 53
+Error en la línea 367: La instrucción no está en un procedimiento.
+txtimail.TabIndex = 14
+Error en la línea 368: La instrucción no está en un procedimiento.
+txtimail.Top = 264
+Error en la línea 369: La instrucción no está en un procedimiento.
+txtimail.Width = 469
+Error en la línea 370: La instrucción no está en un procedimiento.
+txtimail.Name = "txtimail"
+Error en la línea 371: La instrucción no está en un procedimiento.
+txtfecreacli.Height = 24
+Error en la línea 372: La instrucción no está en un procedimiento.
+txtfecreacli.Left = 331
+Error en la línea 373: La instrucción no está en un procedimiento.
+txtfecreacli.Top = 29
+Error en la línea 374: La instrucción no está en un procedimiento.
+txtfecreacli.Visible = .F.
+Error en la línea 375: La instrucción no está en un procedimiento.
+txtfecreacli.Width = 13
+Error en la línea 376: La instrucción no está en un procedimiento.
+txtfecreacli.Name = "txtfecreacli"
+Error en la línea 377: La instrucción no está en un procedimiento.
+Tslabel5.Height = 17
+Error en la línea 378: La instrucción no está en un procedimiento.
+Tslabel5.Left = 323
+Error en la línea 379: La instrucción no está en un procedimiento.
+Tslabel5.Top = 17
+Error en la línea 380: La instrucción no está en un procedimiento.
+Tslabel5.Visible = .F.
+Error en la línea 381: La instrucción no está en un procedimiento.
+Tslabel5.Width = 38
+Error en la línea 382: La instrucción no está en un procedimiento.
+Tslabel5.Name = "Tslabel5"
+Error en la línea 383: La instrucción no está en un procedimiento.
+txtultran.Height = 24
+Error en la línea 384: La instrucción no está en un procedimiento.
+txtultran.Left = 451
+Error en la línea 385: La instrucción no está en un procedimiento.
+txtultran.Top = 29
+Error en la línea 386: La instrucción no está en un procedimiento.
+txtultran.Visible = .F.
+Error en la línea 387: La instrucción no está en un procedimiento.
+txtultran.Width = 24
+Error en la línea 388: La instrucción no está en un procedimiento.
+txtultran.Name = "txtultran"
+Error en la línea 389: La instrucción no está en un procedimiento.
+Tslabel6.Height = 17
+Error en la línea 390: La instrucción no está en un procedimiento.
+Tslabel6.Left = 450
+Error en la línea 391: La instrucción no está en un procedimiento.
+Tslabel6.Top = 17
+Error en la línea 392: La instrucción no está en un procedimiento.
+Tslabel6.Visible = .F.
+Error en la línea 393: La instrucción no está en un procedimiento.
+Tslabel6.Width = 36
+Error en la línea 394: La instrucción no está en un procedimiento.
+Tslabel6.Name = "Tslabel6"
+Error en la línea 395: La instrucción no está en un procedimiento.
+txtMontran.Height = 22
+Error en la línea 396: La instrucción no está en un procedimiento.
+txtMontran.Left = 487
+Error en la línea 397: La instrucción no está en un procedimiento.
+txtMontran.Top = 29
+Error en la línea 398: La instrucción no está en un procedimiento.
+txtMontran.Visible = .F.
+Error en la línea 399: La instrucción no está en un procedimiento.
+txtMontran.Width = 24
+Error en la línea 400: La instrucción no está en un procedimiento.
+txtMontran.Name = "txtMontran"
+Error en la línea 401: La instrucción no está en un procedimiento.
+Tslabel7.Height = 22
+Error en la línea 402: La instrucción no está en un procedimiento.
+Tslabel7.Left = 495
+Error en la línea 403: La instrucción no está en un procedimiento.
+Tslabel7.Top = 13
+Error en la línea 404: La instrucción no está en un procedimiento.
+Tslabel7.Visible = .F.
+Error en la línea 405: La instrucción no está en un procedimiento.
+Tslabel7.Width = 24
+Error en la línea 406: La instrucción no está en un procedimiento.
+Tslabel7.Name = "Tslabel7"
+Error en la línea 407: La instrucción no está en un procedimiento.
+txtRef.Height = 24
+Error en la línea 408: La instrucción no está en un procedimiento.
+txtRef.Left = 367
+Error en la línea 409: La instrucción no está en un procedimiento.
+txtRef.Top = 29
+Error en la línea 410: La instrucción no está en un procedimiento.
+txtRef.Visible = .F.
+Error en la línea 411: La instrucción no está en un procedimiento.
+txtRef.Width = 16
+Error en la línea 412: La instrucción no está en un procedimiento.
+txtRef.Name = "txtRef"
+Error en la línea 413: La instrucción no está en un procedimiento.
+Tslabel8.Height = 17
+Error en la línea 414: La instrucción no está en un procedimiento.
+Tslabel8.Left = 367
+Error en la línea 415: La instrucción no está en un procedimiento.
+Tslabel8.Top = 17
+Error en la línea 416: La instrucción no está en un procedimiento.
+Tslabel8.Visible = .F.
+Error en la línea 417: La instrucción no está en un procedimiento.
+Tslabel8.Width = 24
+Error en la línea 418: La instrucción no está en un procedimiento.
+Tslabel8.Name = "Tslabel8"
+Error en la línea 419: La instrucción no está en un procedimiento.
+txtultpago.Height = 24
+Error en la línea 420: La instrucción no está en un procedimiento.
+txtultpago.Left = 304
+Error en la línea 421: La instrucción no está en un procedimiento.
+txtultpago.Top = 30
+Error en la línea 422: La instrucción no está en un procedimiento.
+txtultpago.Visible = .F.
+Error en la línea 423: La instrucción no está en un procedimiento.
+txtultpago.Width = 16
+Error en la línea 424: La instrucción no está en un procedimiento.
+txtultpago.Name = "txtultpago"
+Error en la línea 425: La instrucción no está en un procedimiento.
+Tslabel9.Height = 17
+Error en la línea 426: La instrucción no está en un procedimiento.
+Tslabel9.Left = 294
+Error en la línea 427: La instrucción no está en un procedimiento.
+Tslabel9.Top = 17
+Error en la línea 428: La instrucción no está en un procedimiento.
+Tslabel9.Visible = .F.
+Error en la línea 429: La instrucción no está en un procedimiento.
+Tslabel9.Width = 25
+Error en la línea 430: La instrucción no está en un procedimiento.
+Tslabel9.Name = "Tslabel9"
+Error en la línea 431: La instrucción no está en un procedimiento.
+Tslabel10.Height = 22
+Error en la línea 432: La instrucción no está en un procedimiento.
+Tslabel10.Left = 403
+Error en la línea 433: La instrucción no está en un procedimiento.
+Tslabel10.Top = 14
+Error en la línea 434: La instrucción no está en un procedimiento.
+Tslabel10.Visible = .F.
+Error en la línea 435: La instrucción no está en un procedimiento.
+Tslabel10.Width = 24
+Error en la línea 436: La instrucción no está en un procedimiento.
+Tslabel10.Name = "Tslabel10"
+Error en la línea 437: La instrucción no está en un procedimiento.
+txtbce.Height = 22
+Error en la línea 438: La instrucción no está en un procedimiento.
+txtbce.Left = 403
+Error en la línea 439: La instrucción no está en un procedimiento.
+txtbce.Top = 29
+Error en la línea 440: La instrucción no está en un procedimiento.
+txtbce.Visible = .F.
+Error en la línea 441: La instrucción no está en un procedimiento.
+txtbce.Width = 26
+Error en la línea 442: La instrucción no está en un procedimiento.
+txtbce.Name = "txtbce"
+Error en la línea 443: La instrucción no está en un procedimiento.
+this.Parent.txtMin_Ord_Amt.Value = 1  
+Error en la línea 445: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 446: Error de anidamiento.
+commandbutton
+Error en la línea 448: No se reconoce el verbo de comando.
+Left = 81
+Error en la línea 449: La instrucción no está en un procedimiento.
+Height = 26
+Error en la línea 450: La instrucción no está en un procedimiento.
+Width = 107
+Error en la línea 451: La instrucción no está en un procedimiento.
+Caption = "\<Aceptar"
+Error en la línea 452: La instrucción no está en un procedimiento.
+Default = .T.
+Error en la línea 453: La instrucción no está en un procedimiento.
+TabIndex = 16
+Error en la línea 454: La instrucción no está en un procedimiento.
+Name = "cmdOK"
+Error en la línea 455: La instrucción no está en un procedimiento.
+FontSize = 10
+Error en la línea 457: La instrucción no está en un procedimiento.
+BackStyle = 0
+Error en la línea 458: La instrucción no está en un procedimiento.
+Caption = "%"
+Error en la línea 459: La instrucción no está en un procedimiento.
+Height = 17
+Error en la línea 460: La instrucción no está en un procedimiento.
+Left = 517
+Error en la línea 461: La instrucción no está en un procedimiento.
+Top = 229
+Error en la línea 462: La instrucción no está en un procedimiento.
+Width = 40
+Error en la línea 463: La instrucción no está en un procedimiento.
+TabIndex = 30
+Error en la línea 464: La instrucción no está en un procedimiento.
+Name = "Label1"
+Error en la línea 465: La instrucción no está en un procedimiento.
+commandbutton
+Error en la línea 467: No se reconoce el verbo de comando.
+llError = !TABLEUPDATE(.T.)
+Error en la línea 468: La instrucción no está en un procedimiento.
+IF llError
+Error en la línea 469: La instrucción no está en un procedimiento.
+IF AERROR(laError) > 0
+Error en la línea 470: La instrucción no está en un procedimiento.
+thisform.Error(laError[1])
+Error en la línea 471: La instrucción no está en un procedimiento.
+ENDIF
+Error en la línea 472: La instrucción no está en un procedimiento.
+ELSE
+Error en la línea 473: La instrucción no está en un procedimiento.
+thisform.Release()
+Error en la línea 475: La instrucción no está en un procedimiento.
+ENDIF
+Error en la línea 476: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 478: Error de anidamiento.
+ýþ
+Error en la línea 480: No se reconoce el verbo de comando.
+(ü÷	
+Error en la línea 484: No se reconoce el verbo de comando.
+
+Error en la línea 485: No se reconoce el verbo de comando.
+ýùÿ
+Error en la línea 486: No se reconoce el verbo de comando.
+ýþ
+Error en la línea 499: No se reconoce el verbo de comando.

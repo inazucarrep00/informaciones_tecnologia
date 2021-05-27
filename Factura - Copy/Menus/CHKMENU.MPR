@@ -1,0 +1,39 @@
+*       *********************************************************
+*       *                                                         
+*       * 09/03/13             CHKMENU.MPR              20:26:00  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Nombre del autor                                        
+*       *                                                         
+*       * Copyright (C) 2013 Nombre de la organización            
+*       * Dirección                                               
+*       * Ciudad,     Código pos                                  
+*       * País                                              
+*       *                                                         
+*       * Descripción:                                            
+*       * Este programa se generó automáticamente por GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+
+DEFINE PAD chkPad OF _MSYSMENU PROMPT "Comprobar elementos" COLOR SCHEME 3 ;
+	AFTER _MSYSTEM ;
+	KEY ALT+C, ""
+ON PAD chkPad OF _MSYSMENU ACTIVATE POPUP checkitems
+
+DEFINE POPUP checkitems MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF checkitems PROMPT "Elemento 1"
+DEFINE BAR 2 OF checkitems PROMPT "Elemento 2"
+DEFINE BAR 3 OF checkitems PROMPT "\-"
+DEFINE BAR 4 OF checkitems PROMPT "Elemento 3"
+DEFINE BAR 5 OF checkitems PROMPT "Elemento 4"
+DEFINE BAR 6 OF checkitems PROMPT "Elemento 5"

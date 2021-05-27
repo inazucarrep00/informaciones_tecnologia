@@ -1,0 +1,39 @@
+https://www.youtube.com/watch?v=xGvO4zX9fJE
+https://dessmexico.zendesk.com/hc/es/articles/210205533-Corte-de-Caja-por-usuario-diario-y-por-turno-
+
+
+THIS.SelectedItem.Index
+banreservas  973,748.37 --> 873,748.37
+
+bhd  2,945.49  --> 102,945.49
+
+transferencia1 de 100,000
+------------------------------------------------------------------------
+banreservas  913,886.46 --> 808,886.46 
+bhd  2,945.49  --> 207,945.49
+
+transferencia2  105,000
+-------------------------------------------------------------------------
+banreservas  913,886.46 --> 808,886.46 --> 735,886.46 
+bhd  2,945.49  --> 207,945.49 --> 280,945.49
+
+transferencia3  73,000
+
+
+
+    Create Cursor myTest (myID i, myType c(20))
+    For ix = 1 To 20
+      Insert Into myTest (myID,myType) Values (ix,Sys(2015))
+    Endfor
+    Locate
+
+-  como eliminar la informacion de las comandas cuando sean preparados los platos para poder entrar otra
+
+-  en el arbol eliminar el nodo cuando cuando el dato sea movido al grid
+
+- la logica para la cola de comandas cuando salga una buscar una orden en toda para saber en cuanl sera la modificada
+
+-  inicio/cierre de caja
+
+- reporte de cuadre de caja
+873,848.37

@@ -1,0 +1,32 @@
+RETURN 
+Error in line 176: Statement is not in a procedure.
+WITH THIS
+Error in line 178: Statement is not in a procedure.
+lnGridLeftWall = 1 + .Left + IIF(.DeleteMark and .RecordMark,18,  IIF(.DeleteMark OR .RecordMark,9,0))
+Error in line 182: Statement is not in a procedure.
+lnGridRightWall = .Left + .Width  -IIF(.ScrollBars>1,14,0)
+Error in line 185: Statement is not in a procedure.
+lnGridBottomEdge = .Top + .Height - IIF(.ScrollBars=1 OR  .ScrollBars=3, 12 ,0)
+Error in line 189: Statement is not in a procedure.
+lnPrevColwidths = 0
+Error in line 192: Statement is not in a procedure.
+lnRowlevel = CEILING((nYcoord - .Top -  .HeaderHeight) / .RowHeight)
+Error in line 196: Statement is not in a procedure.
+SELECT EVALUATE('THIS.RecordSource')
+Error in line 199: Statement is not in a procedure.
+FOR lnMi = .LeftColumn TO .ColumnCount
+Error in line 202: Statement is not in a procedure.
+IF BETWEEN(nXCoord, lnGridLeftwall + lnPrevColWidths, lnGridLeftwall +  lnPrevColwidths + THIS.Columns(lnMi).Width) AND lnRowlevel > 0 AND  nYCoord < lnGridBottomEdge AND nXCoord < lnGridRightWall
+Error in line 207: Statement is not in a procedure.
+WAIT WINDOW "Column Name : " +  THIS.Columns(lnMi).Name + " -> " +  THIS.Columns(lnMi).ControlSource +  " RowLevel : " + TRANSFORM(lnRowlevel ,"99999") NOWAIT    
+Error in line 213: Statement is not in a procedure.
+EXIT       
+Error in line 217: Statement is not in a procedure.
+ENDIF
+Error in line 219: Statement is not in a procedure.
+lnPrevColWidths = lnPrevColWidths + .Columns(lnMi).Width
+Error in line 223: Statement is not in a procedure.
+NEXT
+Error in line 225: Statement is not in a procedure.
+ENDWITH
+Error in line 226: Statement is not in a procedure.
